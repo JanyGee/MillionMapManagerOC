@@ -13,6 +13,8 @@
 		3190F9B41FB52DD500372676 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3190F9B31FB52DD500372676 /* Assets.xcassets */; };
 		3190F9B71FB52DD500372676 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3190F9B51FB52DD500372676 /* LaunchScreen.storyboard */; };
 		3190F9BA1FB52DD500372676 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3190F9B91FB52DD500372676 /* main.m */; };
+		3190F9C41FB5351800372676 /* MapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3190F9C31FB5351800372676 /* MapView.m */; };
+		3190F9C71FB536AD00372676 /* JanyLocationConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3190F9C61FB536AD00372676 /* JanyLocationConverter.m */; };
 		AF62D4199722EBE3C31BC83C /* libPods-Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E118B6C12537B37AD7572D6 /* libPods-Example.a */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +31,10 @@
 		3190F9B61FB52DD500372676 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3190F9B81FB52DD500372676 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3190F9B91FB52DD500372676 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3190F9C21FB5351800372676 /* MapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapView.h; sourceTree = "<group>"; };
+		3190F9C31FB5351800372676 /* MapView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapView.m; sourceTree = "<group>"; };
+		3190F9C51FB536AD00372676 /* JanyLocationConverter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JanyLocationConverter.h; sourceTree = "<group>"; };
+		3190F9C61FB536AD00372676 /* JanyLocationConverter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JanyLocationConverter.m; sourceTree = "<group>"; };
 		5143FCE6F5383F68F36F53E0 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,6 +71,7 @@
 		3190F9A91FB52DD500372676 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				3190F9C11FB5343900372676 /* JanyMapView */,
 				3190F9AA1FB52DD500372676 /* AppDelegate.h */,
 				3190F9AB1FB52DD500372676 /* AppDelegate.m */,
 				3190F9AD1FB52DD500372676 /* ViewController.h */,
@@ -77,6 +84,17 @@
 			);
 			path = Example;
 			sourceTree = "<group>";
+		};
+		3190F9C11FB5343900372676 /* JanyMapView */ = {
+			isa = PBXGroup;
+			children = (
+				3190F9C21FB5351800372676 /* MapView.h */,
+				3190F9C31FB5351800372676 /* MapView.m */,
+				3190F9C51FB536AD00372676 /* JanyLocationConverter.h */,
+				3190F9C61FB536AD00372676 /* JanyLocationConverter.m */,
+			);
+			path = JanyMapView;
+			sourceTree = SOURCE_ROOT;
 		};
 		B00ECBCC6D519805A5107987 /* Frameworks */ = {
 			isa = PBXGroup;
@@ -224,8 +242,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3190F9AF1FB52DD500372676 /* ViewController.m in Sources */,
+				3190F9C41FB5351800372676 /* MapView.m in Sources */,
 				3190F9BA1FB52DD500372676 /* main.m in Sources */,
 				3190F9AC1FB52DD500372676 /* AppDelegate.m in Sources */,
+				3190F9C71FB536AD00372676 /* JanyLocationConverter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +383,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 42NQDJ4LVM;
 				INFOPLIST_FILE = Example/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Million.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -378,6 +399,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 42NQDJ4LVM;
 				INFOPLIST_FILE = Example/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Million.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
